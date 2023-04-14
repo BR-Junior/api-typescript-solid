@@ -1,9 +1,9 @@
-import {IGetUsers, IGetUsersRepository} from "@/controllers/getUsers/IgetUsers";
+import { IGetUsersController, IGetUsersRepository} from "./IgetUsers";
 
 
-export class GetUsersController implements IGetUsers {
+export class GetUsersController implements IGetUsersController {
   constructor(private readonly getUsersRepository: IGetUsersRepository) {}
-  async handle(): any {
+  async handle() {
     try {
       // validar requisição
       // direcionar chamada para o Repository
